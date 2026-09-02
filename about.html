@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About me and contact information.">
+    <title>My Portfolio | About & Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">My Portfolio</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav"><span
+                class="sr-only">Open navigation menu</span>☰</button>
+        <nav id="siteNav" aria-label="Main navigation">
+            <a href="index.html">Home</a><a href="projects.html">Projects</a><a class="active" href="about.html">About
+                &amp; Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="page-heading" aria-labelledby="about-title">
+            <p class="eyebrow">Get to know me</p>
+            <h1 id="about-title">About Me</h1>
+            <p>I am an IT student interested in web development, design, and practical technology solutions.</p>
+        </section>
+        <section class="section two-column" aria-labelledby="skills-title">
+            <div>
+                <h2 id="skills-title">My Skills</h2>
+                <ul class="skill-list">
+                    <li>HTML5 &amp; semantic structure</li>
+                    <li>CSS3 &amp; responsive design</li>
+                    <li>JavaScript &amp; DOM manipulation</li>
+                    <li>Accessibility basics</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>My Goal</h3>
+                <p>My goal is to keep building technical skills while creating websites that are useful, accessible, and
+                    easy to navigate.</p>
+            </div>
+        </section>
+        <section class="section contact-section" aria-labelledby="contact-title">
+            <p class="eyebrow">Let's connect</p>
+            <h2 id="contact-title">Contact Me</h2>
+            <p>Use the form below to send a message. Required fields are checked before the form can be submitted.</p>
+            <form id="contactForm" novalidate>
+                <div class="form-grid">
+                    <div class="form-field"><label for="name">Name <span aria-hidden="true">*</span></label><input
+                            id="name" name="name" type="text" autocomplete="name" required aria-describedby="nameError">
+                        <p id="nameError" class="error-message" aria-live="polite"></p>
+                    </div>
+                    <div class="form-field"><label for="email">Email <span aria-hidden="true">*</span></label><input
+                            id="email" name="email" type="email" autocomplete="email" required
+                            aria-describedby="emailError">
+                        <p id="emailError" class="error-message" aria-live="polite"></p>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Reason for contacting me</legend><label><input type="radio" name="reason" value="project"
+                            checked> Project</label><label><input type="radio" name="reason" value="question">
+                        Question</label><label><input type="radio" name="reason" value="other"> Other</label>
+                </fieldset>
+                <div class="form-field"><label for="message">Message <span aria-hidden="true">*</span></label><textarea
+                        id="message" name="message" rows="6" required aria-describedby="messageError"></textarea>
+                    <p id="messageError" class="error-message" aria-live="polite"></p>
+                </div>
+                <button class="button" type="submit">Send Message</button>
+                <p id="formStatus" class="status-message" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Diamond Bowden. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
