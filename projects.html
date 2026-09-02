@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects and web development work.">
+    <title>My Portfolio | Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">My Portfolio</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav"><span
+                class="sr-only">Open navigation menu</span>☰</button>
+        <nav id="siteNav" aria-label="Main navigation">
+            <a href="index.html">Home</a><a class="active" href="projects.html">Projects</a><a href="about.html">About
+                &amp; Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="page-heading" aria-labelledby="projects-title">
+            <p class="eyebrow">My work</p>
+            <h1 id="projects-title">Projects &amp; Work</h1>
+            <p>Here are examples of my school and personal web development projects.</p>
+        </section>
+        <section class="section" aria-labelledby="filter-title">
+            <h2 id="filter-title">Project Gallery</h2>
+            <div class="filter-buttons" aria-label="Filter projects">
+                <button class="filter-button active-filter" data-filter="all">All</button>
+                <button class="filter-button" data-filter="web">Websites</button>
+                <button class="filter-button" data-filter="javascript">JavaScript</button>
+                <button class="filter-button" data-filter="design">Design</button>
+            </div>
+            <div class="card-grid project-grid">
+                <article class="card project-card" id="portfolio" data-category="web">
+                    <p class="tag">Website</p>
+                    <h3>Personal Portfolio</h3>
+                    <p>A multi-page responsive portfolio using semantic HTML and reusable CSS.</p>
+                    <p><strong>Tools:</strong> HTML, CSS</p>
+                </article>
+                <article class="card project-card" id="dom-project" data-category="javascript">
+                    <p class="tag">JavaScript</p>
+                    <h3>DOM Interaction Project</h3>
+                    <p>A project using event listeners, DOM manipulation, dynamic content, and validation.</p>
+                    <p><strong>Tools:</strong> JavaScript, HTML, CSS</p>
+                </article>
+                <article class="card project-card" id="future-project" data-category="design">
+                    <p class="tag">Design</p>
+                    <h3>Future Web Project</h3>
+                    <p>A placeholder for a future user-interface or visual design project.</p>
+                    <p><strong>Tools:</strong> TBD</p>
+                </article>
+            </div>
+            <p id="filterStatus" class="status-message" aria-live="polite"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Diamond Bowden. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
